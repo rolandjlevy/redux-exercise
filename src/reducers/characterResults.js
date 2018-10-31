@@ -1,10 +1,10 @@
-function characterResults(state = [], action){
+function characterResult(state = {}, action){
   switch (action.type) {
-    case "RECEIVE_CHARACTERS": 
-      return action.characters
+    case "RECEIVE_CHARACTER": 
+      return action.character
     default: 
       return state
   }
 }
 
-export default characterResults;
+export default characterResult;
