@@ -20,6 +20,6 @@ export function fetchCharacter(characterString){
             dispatch(receiveCharacter(result));
             dispatch(setCharacterString(''));
         })
-        .catch(error=> alert(`What's going on?!`))
+        .catch(error => alert(`What's going on?!`))
     }
 }
