@@ -1,10 +1,14 @@
 import React from 'react';
+import CharacterSearchContainer from '../containers/CharacterSearchContainer';
+import CharacterResultContainer from '../containers/CharacterResultContainer';
+
 
 class App extends React.Component {
   render(){
     return (
       <div>
-        Content goes here
+        <CharacterSearchContainer />
+        <CharacterResultContainer />
       </div>
     )
   }
