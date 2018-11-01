@@ -4,14 +4,15 @@ import { setItemString, fetchItem } from '../actions';
 
 const mapStateToProps = state => {
     return {
-        itemString: state.itemInput
+        itemString: state.itemInput,
+        category: state.categorySelector
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         handleChange: itemString => dispatch(setItemString(itemString)),
-        submitSearch: itemString => dispatch(fetchItem(itemString))
+        submitSearch: (category, itemString) => dispatch(fetchItem(category, itemString))
     };
 };
 

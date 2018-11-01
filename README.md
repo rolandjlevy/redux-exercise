@@ -19,3 +19,8 @@ A good way to go about this is to create your initial Redux loop in order of exe
 **Stretch goal**
 
 3. Add a select element to your search component which will allow us to select which end point we want to search `people`, `vehicles`, `planets`, `films`, `species` or `starships`. Use the value the from the search input to set api end point for the search.
+
+
+
+### react-dropdown
+https://www.npmjs.com/package/react-dropdown 

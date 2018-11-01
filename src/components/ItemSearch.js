@@ -1,11 +1,11 @@
 import React from "react";
 
-function ItemSearch({ itemString, handleChange, submitSearch }) {
+function ItemSearch({ category, itemString, handleChange, submitSearch }) {
   return (
     <form
       onSubmit={event => {
         event.preventDefault();
-        submitSearch(itemString);
+        submitSearch(category, itemString);
       }}
     >
       <label>Search for item:</label>

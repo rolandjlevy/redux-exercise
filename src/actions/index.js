@@ -1,3 +1,10 @@
+export function setCategory(category){
+    return{
+        type: "SET_CATEGORY",
+        category: category
+    }
+}
+
 export function setItemString(itemString) {
     return {
         type: 'SET_ITEM_STRING',
@@ -12,9 +19,9 @@ export function receiveItem(result){
     }
 }
 
-export function fetchItem(itemString){
+export function fetchItem(category, itemString){
     return function(dispatch, getState){
-        fetch(`https://swapi.co/api/people/?search=${itemString}`)
+        fetch(`https://swapi.co/api/${category}/?search=${itemString}`)
         .then(response=> response.json())
         .then(result=> {
             dispatch(receiveItem(result));
