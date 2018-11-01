@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import characterInput from './characterInput';
-import characterResult from './characterResult';
+import itemInput from './itemInput';
+import itemResult from './itemResult';
 
 export default combineReducers({
-  characterInput,
-  characterResult
+  itemInput,
+  itemResult
 });

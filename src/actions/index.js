@@ -1,24 +1,24 @@
-export function setCharacterString(characterString) {
+export function setItemString(itemString) {
     return {
-        type: 'SET_CHARACTER_STRING',
-        characterString: characterString
+        type: 'SET_ITEM_STRING',
+        itemString: itemString
     }
 }
 
-export function receiveCharacter(result){
+export function receiveItem(result){
     return {
-        type: 'RECEIVE_CHARACTER',
-        character: result.results[0]
+        type: 'RECEIVE_ITEM',
+        item: result.results[0]
     }
 }
 
-export function fetchCharacter(characterString){
+export function fetchItem(itemString){
     return function(dispatch, getState){
-        fetch(`https://swapi.co/api/people/?search=${characterString}`)
+        fetch(`https://swapi.co/api/people/?search=${itemString}`)
         .then(response=> response.json())
         .then(result=> {
-            dispatch(receiveCharacter(result));
-            dispatch(setCharacterString(''));
+            dispatch(receiveItem(result));
+            dispatch(setItemString(''));
         })
         .catch(error => console.log(`What's going on?!`))
     }
